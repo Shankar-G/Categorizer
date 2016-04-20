@@ -26,7 +26,7 @@ public interface CategoryProcess {
      * Process the categoryAndSubCategorySet read from the file.
      * 
      * @param categoryAndSubCategorySet
-     * holding the file contents 
+     * holds the file contents 
      */
     void processValidCategories(Set<String> categoryAndSubCategorySet);
 

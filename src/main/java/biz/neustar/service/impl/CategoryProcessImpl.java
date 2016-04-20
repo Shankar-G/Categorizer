@@ -69,7 +69,7 @@ public class CategoryProcessImpl implements CategoryProcess {
      * from set and also adds the individual category and their associated sub-categories to a map.
      * 
      * @param categoryAndSubCategorySet
-     *            holding the file contents
+     *            holds the file contents
      */
     @Override
     public void processValidCategories(Set<String> categoryAndSubCategorySet) {

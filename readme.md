@@ -1,6 +1,6 @@
-# categorizer
+# Categorizer
 
-Requires a file name as an arugument, Reads and process the file content based on the categories and their associated sub-categories.
+Expects a file name as an arugument, Reads and process the file content based on the categories and their associated sub-categories.
 
 ### Prerequisites:
 
@@ -20,13 +20,13 @@ Requires a file name as an arugument, Reads and process the file content based o
 4. Remove from set if any Unauthorized category entry exist.
 5. Add sub-categories as a value to a pre-populated map for the associated key
 6. Print the Map's key and the value size to the console.
-7. print the set contents to the console.
+7. Print the unique contents of set to the console.
 
 ### How to run:
 
 1. Run from the IDE 
-     Run as java application CategoryProcessLauncher by passing the filename as argument
- 
+     Run as java application CategoryProcessLauncher by passing the filename as argument <br />
+     Example: category.txt
  
 ####File Input:
 - PERSON Bob Jones

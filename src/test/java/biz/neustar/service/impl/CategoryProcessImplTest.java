@@ -51,9 +51,9 @@ public class CategoryProcessImplTest {
         int index = 0;
         final List<String> ALLOWED_CATEGORIES = Arrays.asList("PERSON", "PLACE", "ANIMAL", "COMPUTER", "OTHER");
         final int[] SUB_CATEGORY_COUNT = { 2, 2, 2, 1, 1 };
-        Set<String> randamonlyOrderedSet = getFakeCatAndSubCatInMixedOrder();
-        categoryProcess.processValidCategories(randamonlyOrderedSet);
-        categoryProcess.displayCategoryAndSubcategoriesCount(randamonlyOrderedSet);
+        Set<String> randomlyOrderedSet = getFakeCatAndSubCatInMixedOrder();
+        categoryProcess.processValidCategories(randomlyOrderedSet);
+        categoryProcess.displayCategoryAndSubcategoriesCount(randomlyOrderedSet);
         Map<String, List<String>> categoryAndSubCatMap = ((CategoryProcessImpl) categoryProcess)
                 .getCategoryAndSubCategoryMap();
         for (Map.Entry<String, List<String>> catAndSubCat : categoryAndSubCatMap.entrySet()) {
@@ -65,15 +65,15 @@ public class CategoryProcessImplTest {
 
     @Test
     public void testProcessValidCategories() {
-        Set<String> fakeSet = getFakeCategoryAndSubCategorySet();
-        int totalSizeBeforeProcess = fakeSet.size();
-        categoryProcess.processValidCategories(fakeSet);
-        assertNotEquals(totalSizeBeforeProcess, fakeSet.size());
-        assertFalse(fakeSet.contains("ANIMAL"));
-        assertFalse(fakeSet.contains("            "));
-        assertFalse(fakeSet.contains("    Tree"));
-        assertFalse(fakeSet.contains("PERSON  Bob Jones"));
-        assertFalse(fakeSet.contains("FOOD Steak"));
+        Set<String> fakeCatAndSubCatSet = getFakeCategoryAndSubCategorySet();
+        int totalSizeBeforeProcess = fakeCatAndSubCatSet.size();
+        categoryProcess.processValidCategories(fakeCatAndSubCatSet);
+        assertNotEquals(totalSizeBeforeProcess, fakeCatAndSubCatSet.size());
+        assertFalse(fakeCatAndSubCatSet.contains("ANIMAL"));
+        assertFalse(fakeCatAndSubCatSet.contains("            "));
+        assertFalse(fakeCatAndSubCatSet.contains("    Tree"));
+        assertFalse(fakeCatAndSubCatSet.contains("PERSON  Bob Jones"));
+        assertFalse(fakeCatAndSubCatSet.contains("FOOD Steak"));
     }
 
     private Set<String> getFakeCategoryAndSubCategorySet() {
