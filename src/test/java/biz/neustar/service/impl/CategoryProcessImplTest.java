@@ -53,7 +53,6 @@ public class CategoryProcessImplTest {
         final int[] SUB_CATEGORY_COUNT = { 2, 2, 2, 1, 1 };
         Set<String> randomlyOrderedSet = getFakeCatAndSubCatInMixedOrder();
         categoryProcess.processValidCategories(randomlyOrderedSet);
-        categoryProcess.displayCategoryAndSubcategoriesCount(randomlyOrderedSet);
         Map<String, List<String>> categoryAndSubCatMap = ((CategoryProcessImpl) categoryProcess)
                 .getCategoryAndSubCategoryMap();
         for (Map.Entry<String, List<String>> catAndSubCat : categoryAndSubCatMap.entrySet()) {

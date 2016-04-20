@@ -86,22 +86,7 @@ public class CategoryProcessImpl implements CategoryProcess {
         }
     }
 
-    /**
-     * iterates through the set and prints the unique contents and also displays the category along with its
-     * sub-categories count.
-     * 
-     * @param categoryAndSubCategorySet
-     *            having unique contents
-     */
-    @Override
-    public void displayCategoryAndSubcategoriesCount(Set<String> categoryAndSubCategorySet) {
-        displayCategoriesWithCount();
-        if (CollectionUtils.isNotEmpty(categoryAndSubCategorySet)) {
-            for (String entry : categoryAndSubCategorySet) {
-                System.out.print("\n" + entry);
-            }
-        }
-    }
+    
 
     /**
      * checks whether the category is allowed, if allowed adds the category and its sub-category to the map, else
@@ -134,16 +119,6 @@ public class CategoryProcessImpl implements CategoryProcess {
         }
     }
 
-    /**
-     * iterates the map and prints the category and its count.
-     * 
-     */
-    private void displayCategoriesWithCount() {
-        System.out.println("CATEGORY     COUNT");
-        for (Map.Entry<String, List<String>> entry : categoryAndSubCategoryMap.entrySet()) {
-            System.out.println(entry.getKey() + "     " + entry.getValue().size());
-        }
-    }
     
     /**
      * Returns the map holding the category and sub-category. 

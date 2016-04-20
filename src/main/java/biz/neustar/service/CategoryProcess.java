@@ -29,13 +29,4 @@ public interface CategoryProcess {
      * holds the file contents 
      */
     void processValidCategories(Set<String> categoryAndSubCategorySet);
-
-    /**
-     * Displays the unique category and its associated sub-category with count.
-     * 
-     * @param categoryAndSubCategorySet
-     * having unique contents
-     */
-    void displayCategoryAndSubcategoriesCount(Set<String> categoryAndSubCategorySet);
-
 }
